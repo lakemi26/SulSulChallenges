@@ -5,7 +5,7 @@ import styles from "./navbar.module.css";
 import Image from "next/image";
 
 export const Navbar = () => {
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(true);
 
   function toggleSidebar() {
     setHidden(!hidden);
