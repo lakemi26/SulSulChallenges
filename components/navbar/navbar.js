@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./navbar.module.css";
 import Image from "next/image";
+import MiniButtons from "../buttons/miniButtons";
 
 export const Navbar = () => {
   const [hidden, setHidden] = useState(true);
@@ -47,8 +48,14 @@ export const Navbar = () => {
         </li>
         <li className={styles.navItem}>
           <Link href={"/"} className={styles.navLink}>
-            Conta
+            Guias
           </Link>
+        </li>
+        <li>
+          <MiniButtons link={"/"} text={"login"} buttonType={"#187f9c"} />
+        </li>
+        <li>
+          <MiniButtons link={"/"} text={"Cadastro"} buttonType={"#31b0b8"} />
         </li>
       </ul>
 
@@ -75,7 +82,7 @@ export const Navbar = () => {
         </li>
         <li className={[`${styles.navItem} ${styles.hideOnMobile}`]}>
           <Link href={"/"} className={styles.navLink}>
-            Conta
+            Guias
           </Link>
         </li>
         <li onClick={toggleSidebar} className={styles.menuButton}>
@@ -90,6 +97,12 @@ export const Navbar = () => {
               <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
             </svg>
           </Link>
+        </li>
+        <li className={[`${styles.hideOnMobile}`]}>
+          <MiniButtons link={"/"} text={"Login"} buttonType={"#187f9c"} />
+        </li>
+        <li className={[` ${styles.hideOnMobile}`]}>
+          <MiniButtons link={"/"} text={"Cadastro"} buttonType={"#31b0b8"} />
         </li>
       </ul>
     </nav>
