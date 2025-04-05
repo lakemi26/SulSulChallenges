@@ -1,0 +1,22 @@
+.miniButton {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .miniButton {
+    height: 40px;
+    width: 50px;
+    margin-bottom: 10px;
+  }
+}
